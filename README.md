@@ -9,11 +9,11 @@ Spesifikasi untuk program yang dibuat :
 | ---- | ---- | ---- |
 | 1 | Program dibuat dalam bahasa Python | Wajib |
 | 2 | Program menerima input berupa file eksternal yang berisi matriks area permainan (disediakan pada repository) dengan lambang "#" yang menandai area belum diketahui nomornya | Wajib |
-| 3 | Program melengkapi area-area yang nomornya belum diketahui, strategi dan heuristik yang digunakan dibebaskan dan menjadi salah satu komponen penilaian. **Pencarian solusi harus dibuat sendiri algoritmanya**. | Spesifikasi wajib |
+| 3 | Program melengkapi area-area yang nomornya belum diketahui, strategi dan heuristik yang digunakan dibebaskan dan menjadi salah satu komponen penilaian. **Pencarian solusi harus dibuat sendiri algoritmanya**. | Wajib |
 | 4 | Tuliskan hasil dari sepesifikasi (3) pada command prompt / terminal dan simpan dalam file eksternal. Buatlah agar mudah dibaca | Wajib |
 | 5 | Tuliskan semua koordinat dari area bernomor 5, tuliskan command prompt / terminal dan simpan pada file eksternal yang sama dengan spesifikasi nomor (4). Koordinat dituliskan setelah area permainan | Wajib |
 | 6 | Program dapat membaca inputan dari gambar. **Program hanya perlu dapat membaca gambar spesifik yang ada pada repository**. Library yang digunakan dibebaskan dan tidak ada batasan. | Bonus |
-| 7 | Program diletakkan pada directory **src**, kemudian file pengujian diletakkan pada directory **test**, dan hasil pengujian berupa screenshot diletakkan pada directory **result** | Wajib |
+| 7 | Program diletakkan pada directory src, kemudian file pengujian diletakkan pada directory test, dan hasil pengujian berupa screenshot diletakkan pada directory result | Wajib |
 | 8 | Program dikejakan secara individu, Anda boleh mencari referensi dari manapun namun tidak diperkenankan bekerja sama | Wajib |
 
 Edit file readme setelah fork repository ini sehingga mencakup :
@@ -27,7 +27,7 @@ Edit file readme setelah fork repository ini sehingga mencakup :
 ## Komponen Penilaian 
 1.  Kebenaran program dan fungsionalitasnya
 2.  Algoritma yang digunakan beserta alasan penggunaannya
-3.  Kerapihan kode
+3.  Kerapihan kode dan struktur repository
 
 ## Pengumpulan
 Lakukan merge request hasil fork Anda ke repository ini, informasi selanjutnya mengenai demo akan diberitahukan oleh asisten.
