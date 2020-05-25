@@ -7,19 +7,19 @@ Anda adalah Mr. Khun, saat ini Anda tergabung bersama tim Sweet & Sour untuk men
 
 ## Spesifikasi
 
-### Spesifikasi untuk program yang dibuat :
+#### Spesifikasi untuk program yang dibuat :
 | No | Spesifikasi Program | Jenis |
 | ---- | ---- | ---- |
 | 1 | Program dibuat dalam bahasa Python | Wajib |
-| 2 | Program menerima input berupa file eksternal yang berisi matriks area permainan (disediakan pada repository) dengan lambang "#" yang menandai area belum diketahui nomornya | Wajib |
+| 2 | Program menerima input berupa file eksternal yang berisi matriks area permainan (disediakan pada repository) dengan lambang '#' yang menandai area belum diketahui nomornya | Wajib |
 | 3 | Program melengkapi area-area yang nomornya belum diketahui, strategi dan heuristik yang digunakan dibebaskan dan menjadi salah satu komponen penilaian. **Pencarian solusi harus dibuat sendiri algoritmanya**. | Wajib |
-| 4 | Tuliskan hasil dari sepesifikasi (3) pada command prompt / terminal dan simpan dalam file eksternal. Buatlah agar mudah dibaca | Wajib |
-| 5 | Tuliskan semua koordinat dari area bernomor 5, tuliskan pada command prompt / terminal dan simpan pada file eksternal yang sama dengan spesifikasi nomor (4). Koordinat dituliskan setelah area permainan | Wajib |
+| 4 | Tuliskan hasil dari sepesifikasi (3) pada command prompt/terminal dan simpan dalam file eksternal. Buatlah agar mudah dibaca | Wajib |
+| 5 | Tuliskan semua koordinat dari area bernomor 5, tuliskan pada command prompt/terminal dan simpan pada file eksternal yang sama dengan spesifikasi nomor (4). Koordinat dituliskan setelah area permainan | Wajib |
 | 6 | Program dapat membaca inputan dari gambar. **Program hanya perlu dapat membaca gambar spesifik yang ada pada repository**. Library yang digunakan dibebaskan dan tidak ada batasan. | Bonus |
 | 7 | Program diletakkan pada directory src, kemudian file pengujian diletakkan pada directory test, dan hasil pengujian berupa screenshot diletakkan pada directory result | Wajib |
 | 8 | Program dikejakan secara individu, Anda boleh mencari referensi dari manapun namun tidak diperkenankan bekerja sama | Wajib |
 
-### Edit file readme setelah fork repository ini sehingga mencakup :
+#### Edit file readme setelah fork repository ini sehingga mencakup :
 | No | Spesifikasi |
 | ---- | ---- |
 | 1 | Cara penggunaan program, seperti cara untuk kompilasi serta command yang dapat diterima program |
