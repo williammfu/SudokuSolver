@@ -25,9 +25,12 @@ Edit file readme setelah fork repository ini sehingga mencakup :
 | 4 | Tuliskan referensi (berupa link atau judul buku beserta halamannya) yang membantu Anda dalam mengerjakan tugas ini |
 
 ## Komponen Penilaian 
-1.  Kebenaran program dan fungsionalitasnya
-2.  Algoritma yang digunakan beserta alasan penggunaannya
-3.  Kerapihan kode dan struktur repository
+| No | Komponen |
+| ---- | ---- |
+| 1 | Kebenaran program dan fungsionalitasnya |
+| 2 | Algoritma yang digunakan beserta alasan penggunaannya | 
+| 3 | AKerapihan kode dan struktur repository |
+| 4 | Kejelasan dan kerapihan readme |
 
 ## Pengumpulan
 Lakukan merge request hasil fork Anda ke repository ini, informasi selanjutnya mengenai demo akan diberitahukan oleh asisten.
