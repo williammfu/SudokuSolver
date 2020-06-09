@@ -8,7 +8,16 @@ from src import reader, solver
 if len(sys.argv) == 2:
     
     filename = sys.argv[1]
-    sudoku = reader.read_sudoku(filename)
+    frmat = filename[-4:]
+
+    sudoku = []
+    if frmat == ".png":
+        sudoku = reader.read_image(filename)
+    elif frmat == ".txt":
+        sudoku = reader.read_sudoku(filename)
+    else:
+        print("Format not found")
+        sys.exit()
 
     print("Solving sudoku. . .")
     

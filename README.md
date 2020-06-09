@@ -26,6 +26,11 @@ Anda adalah Mr. Khun, saat ini Anda tergabung bersama tim Sweet & Sour untuk men
 | 3 | Apabila mengerjakan bonus, tuliskan library yang digunakan serta alasan penggunaannya dan kelebihan serta kekurangnnya menurut Anda |
 | 4 | Tuliskan referensi (berupa link atau judul buku beserta halamannya) yang membantu Anda dalam mengerjakan tugas ini |
 
+## Penggunaan Program
+```
+python main.py <nama file>
+```
+
 ## Algoritma
 
 Backtracking **TBD**
