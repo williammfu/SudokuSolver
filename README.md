@@ -1,6 +1,5 @@
 # Sudoku Solver
 
-
 ## Latar Belakang
 Anda adalah Mr. Khun, saat ini Anda tergabung bersama tim Sweet & Sour untuk mencapai puncak menara. Agar dapat mencapai puncak menara, ada harus melalui serangkaian tes untuk dapat naik ke lantai selanjutnya. Saat ini Anda berada di lantai 18 dan administrator lantai tersebut, yaitu Mr. Le Leo ingin sekali menguji kecerdasan tim Anda dalam membuat strategi. Area permainan pada lantai ini dibagi menjadi 81 area, berbentuk seperti matriks berukuran 9x9. Setiap area ditandai dengan angka, dalam satu kolom maupun satu baris tidak boleh ada angka berulang (seperti pada permainan sudoku). Untuk lolos dari tes ini, tim Anda harus mengumpulkan kristal yang ada pada area bernomor 5. Anda yang bertugas sebagai light bearer (bertugas mengawasi seluruh area permainan dan memberikan petunjuk serta menyusun strategi untuk seluruh anggota tim). Anda bisa berkomunikasi dengan seluruh anggota dan melihat seluruh area permainan melalui lighthouse, tugas Anda adalah mencari tahu nomor untuk semua area permainan dan memberitahukan koordinat (x,y) area-area yang ditandai dengan nomor 5 kepada anggota tim Anda.
 
@@ -27,16 +26,20 @@ Anda adalah Mr. Khun, saat ini Anda tergabung bersama tim Sweet & Sour untuk men
 | 3 | Apabila mengerjakan bonus, tuliskan library yang digunakan serta alasan penggunaannya dan kelebihan serta kekurangnnya menurut Anda |
 | 4 | Tuliskan referensi (berupa link atau judul buku beserta halamannya) yang membantu Anda dalam mengerjakan tugas ini |
 
+## Algoritma
 
-## Komponen Penilaian 
-| No | Komponen |
-| ---- | ---- |
-| 1 | Kebenaran program dan fungsionalitasnya |
-| 2 | Algoritma yang digunakan beserta alasan penggunaannya | 
-| 3 | AKerapihan kode dan struktur repository |
-| 4 | Kejelasan dan kerapihan readme |
+Backtracking **TBD**
 
+## Struktur Repository
+- src
+- out
+- test
 
-## Pengumpulan
-Lakukan merge request hasil fork Anda ke repository ini, informasi selanjutnya mengenai demo akan diberitahukan oleh asisten.
+## Library
 
+- OpenCV
+- Pytesseract
+
+## Referensi
+1. A comprehensive guide to OCR with Tesseract, OpenCV and Python ([link](https://nanonets.com/blog/ocr-with-tesseract/))
+2. Schermerhorn, Mike. *A Sudoku Solver* ([link](https://www.cs.rochester.edu/u/brown/242/assts/termprojs/Sudoku09.pdf))
