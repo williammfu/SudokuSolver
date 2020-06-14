@@ -3,7 +3,7 @@ Sudoku solver module
 using the backtracking algorithm
 '''
 from itertools import product
-from src.sudoku import *
+from sudoku import *
 
 INDICES = set(range(9))
 CELLS = set(range(1,10))

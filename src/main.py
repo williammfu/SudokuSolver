@@ -2,7 +2,7 @@
 Main program for sudoku solver
 '''
 from sys import argv
-import src.solver as solver
+import solver
 
 if len(argv) == 4:
     

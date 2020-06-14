@@ -32,6 +32,7 @@ pip install requirements.txt
 ## Penggunaan Program
 Jalankan perintah berikut pada repository ini
 ```
+cd src
 python main.py <input file> <output file> <username>
 ```
 **Keterangan**: 
@@ -43,7 +44,7 @@ python main.py <input file> <output file> <username>
 ### Backtracking
 Algoritma ini merupakan perbaikan dari pencarian solusi secara DFS. Pada pohon pencarian solusi, simpul yang tidak mengarah pada solusi dipangkas dan tidak diekspan lagi.
 
-Dalam penyelesaian sudoku, suatu sel sudoku kosong akan diisi dengan nilai yang tidak melanggar constraint kolom/baris/submatriks, kemudian  
+Dalam penyelesaian sudoku, suatu sel sudoku kosong akan diisi dengan nilai yang tidak melanggar constraint kolom/baris/submatriks, kemudian sel kosong selanjutnya akan diisi hingga seluruh sel kosong pada sudoku terisi atau tidak ada nilai yang bisa diisi pada sel kosong (karena sel yang diisi sebelumnya tidak valid, **backtrack**). Algoritma backtracking dapat diimplementasikan dalam bentuk fungsi rekursif yang akan berhenti saat seluruh sel kosong sudoku sudah terisi (basis).  
 
 **Kompleksitas** : O(n<sup>m</sup>)
 

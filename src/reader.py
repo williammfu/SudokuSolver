@@ -1,14 +1,13 @@
 '''
-I/O Module for a
-sudoku puzzle instance
+I/O Module for reading/writing
+a sudoku puzzle instance
 '''
 import numpy as np
 import cv2
 import pytesseract
 
-TEST_DIR = "./test/"
-OUT_DIR = "./out/"
-DIGITS = {1,2,3,4,5,6,7,8,9}
+TEST_DIR = "../test/"
+OUT_DIR = "../result/"
 
 def config_tesseract(username):
     ''' Configure pytesseract with username '''

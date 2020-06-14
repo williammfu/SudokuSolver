@@ -3,10 +3,10 @@ General scheme to solve
 a sudoku puzzle from text file or
 image file and write its output
 '''
-from src.backtrack import *
-from src.sudoku import *
-from src.solver import *
-from src.reader import *
+from backtrack import *
+from sudoku import *
+from solver import *
+from reader import *
 import time
 
 def solve(input_file, output_file, username):
