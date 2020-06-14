@@ -28,8 +28,9 @@ Anda adalah Mr. Khun, saat ini Anda tergabung bersama tim Sweet & Sour untuk men
 
 ## Penggunaan Program
 ```
-python main.py <nama file>
+python main.py <nama file input> <nama file output>
 ```
+Keterangan: nama file input dapat dalam format **txt** atau **jpg**/**png**, sedangkan output hanya dalam **txt** saja
 
 ## Algoritma
 

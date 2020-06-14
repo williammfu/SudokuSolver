@@ -8,7 +8,7 @@ import pytesseract
 UNAME = "ASUS"
 pytesseract.pytesseract.tesseract_cmd = r"C:\Users\{}\AppData\Local\Tesseract-OCR\tesseract.exe".format(UNAME)
 
-TEST_DIR = "./test/"
+TEST_DIR = "../test/"
 OUT_DIR = "./out/"
 DIGITS = {1,2,3,4,5,6,7,8,9}
 
@@ -87,8 +87,6 @@ def read_image(image_name):
     for i in range(9):
         row = []
         for j in range(9):
-            # top, edge = (i*32) + (3 if i == 3 or i == 0 or i == 2 else 1), (j*32) + (-3 if j == 5 else 3 if j ==0 else 1)
-            # right = (j+1)*32 + (1 if j != 5 and j != 8 else -4)
             n, s, w, e = make_grid(i, j)
             r = tr[ n : s, w : e ]
             digit = pytesseract.image_to_string(r, config=config).replace(".","").replace("-","").replace("\n","")

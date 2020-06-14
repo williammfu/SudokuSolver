@@ -5,7 +5,7 @@ import sys, time
 sys.path.append("./src/")
 from src import reader, solver
 
-if len(sys.argv) == 2:
+if len(sys.argv) == 3:
     
     filename = sys.argv[1]
     frmat = filename[-4:]
@@ -28,8 +28,8 @@ if len(sys.argv) == 2:
         print("Puzzle can't be solved.")
     fin = time.time()
 
-    reader.write_sudoku(sudoku, filename)
-    print(fin-start)
+    reader.write_sudoku(sudoku, sys.argv[2])
+    print("\nElapsed time: {:.4f} s".format(fin-start))
 
 else:
 

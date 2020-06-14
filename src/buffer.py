@@ -20,6 +20,11 @@ def is_duplicate(row):
 
 def accept(sudoku):
     ''' Returns True if a duplicate in Sudoku exists '''
+    
+    # Empty cells exist
+    if None in sudoku:
+        return False
+
     # Check row
     for row in sudoku:
         if is_duplicate(np.array(row).flatten()):
@@ -39,19 +44,5 @@ def accept(sudoku):
 
     return True
 
-def find_possible(sudoku, row, col):
-    ''' Returns a set of posible answer to a cell '''
-    pos = CELLS.copy()
 
-    for i in CELLS:
-        if sudoku[row,i] is not None and sudoku[row, i] in pos:
-            pos.remove(sudoku[row,i])
-        if sudoku[i,col] is not None and sudoku[row, i] in pos:
-            pos.remove(sudoku[i, col])
-    
-    for s in get_grid(sudoku, row, col):
-        if s is not None and s in pos:
-            pos.remove(s)
-
-    return pos
 
