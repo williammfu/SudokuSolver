@@ -5,12 +5,14 @@ sudoku puzzle instance
 import numpy as np
 import cv2
 import pytesseract
-UNAME = "ASUS"
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\{}\AppData\Local\Tesseract-OCR\tesseract.exe".format(UNAME)
 
-TEST_DIR = "../test/"
+TEST_DIR = "./test/"
 OUT_DIR = "./out/"
 DIGITS = {1,2,3,4,5,6,7,8,9}
+
+def config_tesseract(username):
+    ''' Configure pytesseract with username '''
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Users\{}\AppData\Local\Tesseract-OCR\tesseract.exe".format(username)
 
 def read_sudoku(filename):
     ''' Reads a sudoku instance '''
@@ -79,9 +81,9 @@ def read_image(image_name):
     # Directory in test
     full_path = TEST_DIR + image_name 
     img = cv2.imread(full_path, 0)
-    tr = thresholding(img)
+    tr = thresholding(img) # Remove noise in image
 
-    sudoku = []
+    sudoku = [] # Init sudoku
     config = r"--oem 3 --psm 6 outputbase digits" # Tesseract config to read digits only
 
     for i in range(9):
@@ -89,6 +91,7 @@ def read_image(image_name):
         for j in range(9):
             n, s, w, e = make_grid(i, j)
             r = tr[ n : s, w : e ]
+            # Converts digit in image (if any) to an integer
             digit = pytesseract.image_to_string(r, config=config).replace(".","").replace("-","").replace("\n","")
             if digit == "":
                 row.append(None)
@@ -103,5 +106,7 @@ if  __name__ == "__main__":
     f, g = 'image4.png', "tc1.txt"
     a = read_image(f)
     b = read_sudoku(g)
+    print("From image:")
     print(a)
+    print("From txt:")
     print(b)

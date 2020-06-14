@@ -1,38 +1,13 @@
 '''
 Main program for sudoku solver
 '''
-import sys, time
-sys.path.append("./src/")
-from src import reader, solver
+from sys import argv
+import src.solver as solver
 
-if len(sys.argv) == 3:
+if len(argv) == 4:
     
-    filename = sys.argv[1]
-    frmat = filename[-4:]
-
-    sudoku = []
-    if frmat == ".png":
-        sudoku = reader.read_image(filename)
-    elif frmat == ".txt":
-        sudoku = reader.read_sudoku(filename)
-    else:
-        print("Format not found")
-        sys.exit()
-
-    print("Solving sudoku. . .")
-    
-    start = time.time()
-    if solver.backtracking(sudoku):
-        print("Solved!")
-    else:
-        print("Puzzle can't be solved.")
-    fin = time.time()
-
-    reader.write_sudoku(sudoku, sys.argv[2])
-    print("\nElapsed time: {:.4f} s".format(fin-start))
+   solver.solve(argv[1], argv[2], argv[3])
 
 else:
 
-    print("Invalid input")
-    print("Use command: python main.py <filename>")
-    sys.exit()
+    solver.invalid_solve()

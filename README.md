@@ -18,34 +18,82 @@ Anda adalah Mr. Khun, saat ini Anda tergabung bersama tim Sweet & Sour untuk men
 | 7 | Program diletakkan pada directory src, kemudian file pengujian diletakkan pada directory test, dan hasil pengujian berupa screenshot diletakkan pada directory result | Wajib |
 | 8 | Program dikejakan secara individu, Anda boleh mencari referensi dari manapun namun tidak diperkenankan bekerja sama | Wajib |
 
-#### Edit file readme setelah fork repository ini sehingga mencakup :
-| No | Spesifikasi |
-| ---- | ---- |
-| 1 | Cara penggunaan program, seperti cara untuk kompilasi serta command yang dapat diterima program |
-| 2 | Strategi pencarian solusi yang digunakan dan alasan penggunaannya secara lengkap, termasuk kompleksitas algoritmanya | 
-| 3 | Apabila mengerjakan bonus, tuliskan library yang digunakan serta alasan penggunaannya dan kelebihan serta kekurangnnya menurut Anda |
-| 4 | Tuliskan referensi (berupa link atau judul buku beserta halamannya) yang membantu Anda dalam mengerjakan tugas ini |
+## Prerequisite
+Untuk menjalankan program ini, pastikan perangkat anda memiliki 
+1. Python (versi 3.6.0 ke atas)
+2. OpenCV for Python
+3. Pytesseract (untuk OCR)
+
+Apabila perangkat anda memiliki package manager pip, anda dapat menjalankan perintah berikut untuk menginstal prerequisite yang dibutuhkan
+```
+pip install requirements.txt
+```
 
 ## Penggunaan Program
+Jalankan perintah berikut pada repository ini
 ```
-python main.py <nama file input> <nama file output>
+python main.py <input file> <output file> <username>
 ```
-Keterangan: nama file input dapat dalam format **txt** atau **jpg**/**png**, sedangkan output hanya dalam **txt** saja
+**Keterangan**: 
+- Nama file input dapat dalam format **txt** atau **jpg**/**png**, sedangkan output hanya dalam **txt** saja
+- *(Untuk pengguna Windows)* username merupakan nama perangkat Windows
 
 ## Algoritma
 
-Backtracking **TBD**
+### Backtracking
+Algoritma ini merupakan perbaikan dari pencarian solusi secara DFS. Pada pohon pencarian solusi, simpul yang tidak mengarah pada solusi dipangkas dan tidak diekspan lagi.
+
+Dalam penyelesaian sudoku, suatu sel sudoku kosong akan diisi dengan nilai yang tidak melanggar constraint kolom/baris/submatriks, kemudian  
+
+**Kompleksitas** : O(n<sup>m</sup>)
+
+n = banyaknya kemungkinan jawaban pada tiap sel <br>
+m = banyaknya sel kosong pada sudoku
+
+(Aljohani, et al. 2016)
+
+#### Alasan
+Algoritma backtracking dimanfaatkan dalam mengisi puzzle sudoku sebab permasalahan ini memiliki kesamaan dengan *Graph Coloring Problem* yang dapat dipecahkan dengan menggunakan algoritma *backtracking*. Sehingga, algoritma ini juga cocok digunakan untuk memecahkan sudoku.
+
+### Heuristik
+
+Heuristik yang dimanfaatkan dalam backtracking ini adalah **heuristik MRV** (Minimum Remaining Value). Heuristik ini diterapkan dengan mengganggap penyelesaian puzzle sudoku sebagai CSP (*Constraint Satisfaction Problem*). 
+
+Dalam penyelesaian puzzle sudoku, sel sudoku kosong dengan banyak kemungkinan nilai yang paling kecil akan diisi terlebih dahulu. Dengan demikian, diharapkan simpul yang menunjuk pada solusi yang tidak valid dapat dipangkas lebih cepat.
 
 ## Struktur Repository
+
 - src
-- out
+
+Berisi source code program backtracking 
+
+- result
+
+Berisi file txt output program (solusi)
+
 - test
 
-## Library
+Berisi file image atau txt untuk input program
+
+## Image Processing Library
 
 - OpenCV
+
+OpenCV dimanfaatkan untuk mengurangi *noise* yang ada pada gambar serta membagi gambar menjadi 81 grid kecil.
+
+| Kelebihan | Kekurangan |
+| ---- | ---- |
+| OpenCV merupakan *library* untuk mengolah gambar yang paling umum dimanfaatkan (terutama dalam bahasa pemrograman Python). *Library* ini memiliki beragam fungsi dan prosedur yang dapat dimanfaatkan untuk mengolah gambar sesuai keinginan developer. | Untuk pemula, OpenCV ini sedikit sulit karena membutuhkan pengalaman lebih dalam mengolah berbagai jenis struktur data yang ada dalam *library* Python dan membutuhkan pengetahuan tentang *library* NumPy untuk mengolah matriks *image*. |
+
 - Pytesseract
+
+Pytesseract dimanfaatkan untuk mengenali digit yang ada pada image sudoku. 
+
+| Kelebihan | Kekurangan |
+| ---- | ---- |
+| Pengenalan teks dapat dilakukan (dengan *Optical Character Recognition*) tanpa perlu melatih agen pemroses gambar dengan *machine learning* | Instalasi *library* sedikit rumit sebab file binary nya harus diunduh dan diinstal terlebih dahulu. *Library* yang diimport juga harus diikuti dengan konfigurasi tesseract_cmd. |
 
 ## Referensi
 1. A comprehensive guide to OCR with Tesseract, OpenCV and Python ([link](https://nanonets.com/blog/ocr-with-tesseract/))
 2. Schermerhorn, Mike. *A Sudoku Solver* ([link](https://www.cs.rochester.edu/u/brown/242/assts/termprojs/Sudoku09.pdf))
+3. Aljohani, Abdulaziz, et al. *N x N Sudoku Solver* ([link](https://www.cs.rit.edu/~ark/fall2016/654/team/02/report.pdf))
